@@ -1,0 +1,207 @@
+/* Global Green Energy Report — emerald theme */
+
+:root {
+    --emerald-950: #022c22;
+    --emerald-900: #064e3b;
+    --emerald-800: #065f46;
+    --emerald-700: #047857;
+    --emerald-600: #059669;
+    --emerald-500: #10b981;
+    --emerald-400: #34d399;
+    --emerald-100: #d1fae5;
+    --emerald-50: #ecfdf5;
+    --cream: #f8faf8;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --border: rgba(6, 95, 70, 0.2);
+    --shadow: 0 4px 24px rgba(6, 78, 59, 0.12);
+    --radius: 12px;
+    --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--text);
+    background: linear-gradient(165deg, var(--cream) 0%, var(--emerald-50) 45%, #e8f5f0 100%);
+}
+
+header {
+    background: linear-gradient(135deg, var(--emerald-900) 0%, var(--emerald-800) 50%, var(--emerald-700) 100%);
+    color: #fff;
+    padding: 2.5rem clamp(1.25rem, 4vw, 3rem) 2rem;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+nav ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+    max-width: 42rem;
+}
+
+@media (min-width: 640px) {
+    nav ol {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.35rem 1.5rem;
+    }
+}
+
+nav a {
+    color: var(--emerald-100);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #fff;
+    border-bottom-color: var(--emerald-400);
+    outline: none;
+}
+
+main {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 2.5rem clamp(1.25rem, 4vw, 2rem) 3rem;
+}
+
+article {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+section + section {
+    margin-top: 2.25rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--emerald-900);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--emerald-800);
+}
+
+section p {
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+}
+
+section p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+}
+
+ul li::marker {
+    color: var(--emerald-600);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+    font-size: 0.9875rem;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    color: var(--emerald-900);
+    padding: 0 0 0.75rem;
+}
+
+thead {
+    background: linear-gradient(180deg, var(--emerald-800), var(--emerald-900));
+    color: #fff;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--emerald-50);
+}
+
+tbody tr:hover {
+    background: var(--emerald-100);
+}
+
+footer {
+    margin-top: auto;
+    padding: 1.5rem clamp(1.25rem, 4vw, 2rem);
+    text-align: center;
+    background: var(--emerald-950);
+    color: var(--emerald-100);
+    font-size: 0.9375rem;
+}
+
+footer a {
+    color: var(--emerald-400);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #fff;
+    border-bottom-color: var(--emerald-400);
+    outline: none;
+}
